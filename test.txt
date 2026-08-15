@@ -3,21 +3,23 @@ instructions:
     - rule: "実行範囲の制限"
       description: |
         ワークフローは "対象ラベル"のラベルのみに限定して実行
-  definitions:
-    - target_labels:
-        title: "対象ラベル"
-        description: |
-          ワークフローの実行対象のラベル
-        label_name:
-          - "info@otonoie.net/お問い合わせ/物件へのお問い合わせ"
+  definition:
+    target_labels:
+      title: "対象ラベル"
+      description: |
+        ワークフローの実行対象のラベル
+      labels:
+        - label_name: "info@otonoie.net/お問い合わせ/物件へのお問い合わせ"
   workflow:
     step_1:
       title: "未読メール件数の把握"
       action: |
-        未読メールの件数をカウント
-      definition: |
-
-      constraint:
+        未読メール件数をカウント
+      definition:
+        unread_email_count:
+          title: "未読メール件数"
+          description: |
+          constraint:
         
         
     step_2:
