@@ -5,7 +5,7 @@ instructions:
         ワークフローは "対象ラベル"のラベルのみに限定して実行
   variables:
     
-  definition:
+  definitions:
     target_labels:
       title: "対象ラベル"
       description: |
