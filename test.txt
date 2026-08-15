@@ -10,16 +10,16 @@ instructions:
         ワークフローの実行対象のラベル
       labels:
         - label_name: "info@otonoie.net/お問い合わせ/物件へのお問い合わせ"
+    unread_email_count:
+      title: "未読メール件数"
+      description: |
+        
   workflow:
     step_1:
       title: "未読メール件数の把握"
       action: |
         未読メール件数をカウント
-      definition:
-        unread_email_count:
-          title: "未読メール件数"
-          description: |
-          constraint:
+      constraint:
         
         
     step_2:
